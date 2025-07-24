@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - لقمة هنية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#e63946",
+                        secondary: "#1d3557",
+                        accent: "#f1faee"
+                    },
+                    fontFamily: {
+                        'sans': ['Tajawal', 'Arial', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-secondary text-white p-6">
+            <div class="flex items-center space-x-4 mb-8">
+                <img src="./img/1.jpg" alt="شعار لقمة هنية" class="w-12 h-12 rounded-full">
+                <h1 class="text-2xl font-bold">لوحة التحكم</h1>
+            </div>
+            <nav>
+                <a href="admin.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">الرئيسية</a>
+                <a href="admin_orders.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">إدارة الطلبات</a>
+                <a href="admin_menu.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">إدارة القائمة</a>
+                <a href="admin_offers.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">إدارة العروض</a>
+                <a href="admin_users.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">إدارة المستخدمين</a>
+                <a href="admin_promotions.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">العروض والخصومات</a>
+                <a href="admin_subscriptions.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">الاشتراكات</a>
+                <a href="admin_reports.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">التقارير</a>
+                <a href="admin_healthy-meals-admin.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">الوجبات الصحية</a>
+                <a href="admin_business-meals-admin.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">وجبات الأعمال</a>
+                <a href="admin_settings.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">إعدادات المطعم</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-10">
+            <div id="orders" class="page-content">
+                <h2 class="text-3xl font-bold mb-6 text-secondary">إدارة الطلبات</h2>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">الطلبات الحالية</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <!-- Example Order Card -->
+                        <div class="border p-4 rounded-lg">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-bold">طلب #123</span>
+                                <span class="bg-green-500 text-white px-2 py-1 text-sm rounded">جديد</span>
+                            </div>
+                            <p><strong>الزبون:</strong> أحمد علي</p>
+                            <p><strong>الإجمالي:</strong> 150 ر.ي</p>
+                            <p><strong>الحالة:</strong> قيد التحضير</p>
+                            <button class="mt-4 w-full bg-primary text-white py-2 rounded hover:bg-opacity-90">عرض التفاصيل</button>
+                        </div>
+                         <div class="border p-4 rounded-lg">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-bold">طلب #124</span>
+                                <span class="bg-yellow-500 text-white px-2 py-1 text-sm rounded">قيد التوصيل</span>
+                            </div>
+                            <p><strong>الزبون:</strong> فاطمة محمد</p>
+                            <p><strong>الإجمالي:</strong> 85 ر.ي</p>
+                            <p><strong>الحالة:</strong> مع سائق التوصيل</p>
+                            <button class="mt-4 w-full bg-primary text-white py-2 rounded hover:bg-opacity-90">عرض التفاصيل</button>
+                        </div>
+                         <div class="border p-4 rounded-lg">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-bold">طلب #125</span>
+                                <span class="bg-gray-500 text-white px-2 py-1 text-sm rounded">تم التوصيل</span>
+                            </div>
+                            <p><strong>الزبون:</strong> خالد عبدالله</p>
+                            <p><strong>الإجمالي:</strong> 220 ر.ي</p>
+                            <p><strong>الحالة:</strong> مكتمل</p>
+                            <button class="mt-4 w-full bg-primary text-white py-2 rounded hover:bg-opacity-90">عرض التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Other sections will be added here -->
+            <div id="menu" class="page-content" style="display: none;">
+                <h2 class="text-3xl font-bold mb-6 text-secondary">إدارة القائمة</h2>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">إضافة / تعديل طبق</h3>
+                    <form id="menu-form" class="space-y-4">
+                        <input type="hidden" id="item-id" name="itemId">
+                        <div>
+                            <label for="item-name" class="block text-sm font-medium text-gray-700">اسم الطبق</label>
+                            <input type="text" id="item-name" name="name" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="item-price" class="block text-sm font-medium text-gray-700">السعر</label>
+                            <input type="text" id="item-price" name="price" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="item-description" class="block text-sm font-medium text-gray-700">الوصف</label>
+                            <textarea id="item-description" name="description" rows="3" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required></textarea>
+                        </div>
+                        <div>
+                            <label for="item-image" class="block text-sm font-medium text-gray-700">رابط الصورة</label>
+                            <input type="text" id="item-image" name="image" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-opacity-90">حفظ التغييرات</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md mt-6">
+                    <h3 class="text-xl font-bold mb-4">قائمة الطعام الحالية</h3>
+                    <div id="menu-items-list" class="space-y-4">
+                        <!-- Menu items will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+            <div id="promotions" class="page-content" style="display: none;">
+                <h2 class="text-3xl font-bold mb-6 text-secondary">العروض والخصومات</h2>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">إضافة / تعديل عرض</h3>
+                    <form id="promo-form" class="space-y-4">
+                        <input type="hidden" id="promo-id" name="promoId">
+                        <div>
+                            <label for="promo-name" class="block text-sm font-medium text-gray-700">اسم العرض</label>
+                            <input type="text" id="promo-name" name="name" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="promo-price" class="block text-sm font-medium text-gray-700">السعر</label>
+                            <input type="text" id="promo-price" name="price" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label for="promo-description" class="block text-sm font-medium text-gray-700">الوصف</label>
+                            <textarea id="promo-description" name="description" rows="3" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required></textarea>
+                        </div>
+                        <div>
+                            <label for="promo-image" class="block text-sm font-medium text-gray-700">رابط الصورة</label>
+                            <input type="text" id="promo-image" name="image" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-opacity-90">حفظ التغييرات</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md mt-6">
+                    <h3 class="text-xl font-bold mb-4">العروض الحالية</h3>
+                    <div id="promo-items-list" class="space-y-4">
+                        <!-- Promo items will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+            <div id="subscriptions" class="page-content" style="display: none;">
+                <h2 class="text-3xl font-bold mb-6 text-secondary">إدارة الاشتراكات</h2>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">إضافة / تعديل باقة اشتراك</h3>
+                    <form id="sub-form" class="space-y-4">
+                        <input type="hidden" id="sub-id" name="subId">
+                        <div>
+                            <label for="sub-name" class="block text-sm font-medium text-gray-700">اسم الباقة</label>
+                            <input type="text" id="sub-name" name="name" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="sub-price" class="block text-sm font-medium text-gray-700">السعر</label>
+                            <input type="text" id="sub-price" name="price" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="sub-description" class="block text-sm font-medium text-gray-700">الوصف</label>
+                            <textarea id="sub-description" name="description" rows="3" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required></textarea>
+                        </div>
+                        <div>
+                            <label for="sub-meals" class="block text-sm font-medium text-gray-700">الوجبات في الأسبوع</label>
+                            <input type="number" id="sub-meals" name="meals_per_week" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="sub-days" class="block text-sm font-medium text-gray-700">أيام التوصيل (مثال: الأحد,الإثنين)</label>
+                            <input type="text" id="sub-days" name="delivery_days" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-opacity-90">حفظ التغييرات</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md mt-6">
+                    <h3 class="text-xl font-bold mb-4">باقات الاشتراك الحالية</h3>
+                    <div id="sub-items-list" class="space-y-4">
+                        <!-- Subscription items will be dynamically inserted here -->
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md mt-6">
+                    <h3 class="text-xl font-bold mb-4">المشتركون</h3>
+                    <div id="user-subscriptions-list" class="space-y-4">
+                        <!-- User subscriptions will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+            <div id="healthy-meals-admin" class="page-content" style="display: none;">
+                <h2 class="text-3xl font-bold mb-6 text-secondary">إدارة الوجبات الصحية</h2>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">إضافة / تعديل وجبة صحية</h3>
+                    <form id="healthy-form" class="space-y-4">
+                        <input type="hidden" id="healthy-id" name="healthyId">
+                        <div>
+                            <label for="healthy-name" class="block text-sm font-medium text-gray-700">اسم الوجبة</label>
+                            <input type="text" id="healthy-name" name="name" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="healthy-price" class="block text-sm font-medium text-gray-700">السعر</label>
+                            <input type="text" id="healthy-price" name="price" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="healthy-description" class="block text-sm font-medium text-gray-700">الوصف</label>
+                            <textarea id="healthy-description" name="description" rows="3" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required></textarea>
+                        </div>
+                        <div>
+                            <label for="healthy-image" class="block text-sm font-medium text-gray-700">رابط الصورة</label>
+                            <input type="text" id="healthy-image" name="image" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="healthy-calories" class="block text-sm font-medium text-gray-700">السعرات الحرارية</label>
+                            <input type="number" id="healthy-calories" name="calories" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="healthy-diet-type" class="block text-sm font-medium text-gray-700">نوع الحمية</label>
+                            <input type="text" id="healthy-diet-type" name="diet_type" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-opacity-90">حفظ التغييرات</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md mt-6">
+                    <h3 class="text-xl font-bold mb-4">قائمة الوجبات الصحية الحالية</h3>
+                    <div id="healthy-items-list" class="space-y-4">
+                        <!-- Healthy meal items will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+            <div id="business-meals-admin" class="page-content" style="display: none;">
+                <h2 class="text-3xl font-bold mb-6 text-secondary">إدارة وجبات الأعمال</h2>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">إضافة / تعديل وجبة أعمال</h3>
+                    <form id="business-form" class="space-y-4">
+                        <input type="hidden" id="business-id" name="businessId">
+                        <div>
+                            <label for="business-name" class="block text-sm font-medium text-gray-700">اسم الوجبة</label>
+                            <input type="text" id="business-name" name="name" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="business-price" class="block text-sm font-medium text-gray-700">السعر</label>
+                            <input type="text" id="business-price" name="price" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="business-description" class="block text-sm font-medium text-gray-700">الوصف</label>
+                            <textarea id="business-description" name="description" rows="3" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required></textarea>
+                        </div>
+                        <div>
+                            <label for="business-image" class="block text-sm font-medium text-gray-700">رابط الصورة</label>
+                            <input type="text" id="business-image" name="image" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="business-people-count" class="block text-sm font-medium text-gray-700">عدد الأشخاص</label>
+                            <input type="number" id="business-people-count" name="people_count" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-opacity-90">حفظ التغييرات</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md mt-6">
+                    <h3 class="text-xl font-bold mb-4">قائمة وجبات الأعمال الحالية</h3>
+                    <div id="business-items-list" class="space-y-4">
+                        <!-- Business meal items will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+            <div id="reports" class="page-content" style="display: none;">
+                <h2 class="text-3xl font-bold mb-6 text-secondary">التقارير</h2>
+                <div class="bg-white p-8 rounded-lg shadow-md mb-6">
+                    <h3 class="text-xl font-bold mb-4">تحليل المبيعات</h3>
+                    <div id="sales-analysis-data">
+                        <!-- Sales analysis data will be dynamically inserted here -->
+                        <p>إجمالي المبيعات: <span class="font-bold text-primary">0 ر.ي</span></p>
+                        <p>عدد الطلبات: <span class="font-bold text-primary">0</span></p>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md mb-6">
+                    <h3 class="text-xl font-bold mb-4">الأطباق الأكثر مبيعًا</h3>
+                    <div id="best-selling-dishes-data">
+                        <!-- Best-selling dishes data will be dynamically inserted here -->
+                        <p>لا توجد بيانات حاليًا.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">العملاء المميزون</h3>
+                    <div id="premium-customers-data">
+                        <!-- Premium customers data will be dynamically inserted here -->
+                        <p>لا توجد بيانات حاليًا.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="settings" class="page-content" style="display: none;">
+                <h2 class="text-3xl font-bold mb-6 text-secondary">إعدادات المطعم</h2>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <form id="settings-form" class="space-y-4">
+                        <div>
+                            <label for="working-hours" class="block text-sm font-medium text-gray-700">ساعات العمل</label>
+                            <input type="text" id="working-hours" name="working_hours" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label for="delivery-companies" class="block text-sm font-medium text-gray-700">شركات التوصيل (روابط مفصولة بفاصلة)</label>
+                            <input type="text" id="delivery-companies" name="delivery_companies" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label for="payment-settings" class="block text-sm font-medium text-gray-700">إعدادات الدفع الإلكتروني</label>
+                            <textarea id="payment-settings" name="payment_settings" rows="3" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-opacity-90">حفظ الإعدادات</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../src/admin.js"></script>
+</body>
+</html>

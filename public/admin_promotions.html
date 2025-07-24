@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العروض والخصومات - لقمة هنية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#e63946",
+                        secondary: "#1d3557",
+                        accent: "#f1faee"
+                    },
+                    fontFamily: {
+                        'sans': ['Tajawal', 'Arial', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-secondary text-white p-6">
+            <div class="flex items-center space-x-4 mb-8">
+                <img src="./img/0.jpg" alt="شعار لقمة هنية" class="w-12 h-12 rounded-full">
+                <h1 class="text-2xl font-bold">لوحة التحكم</h1>
+            </div>
+            <nav>
+                <a href="admin.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">الرئيسية</a>
+                <a href="admin_orders.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">إدارة الطلبات</a>
+                <a href="admin_menu.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">إدارة القائمة</a>
+                <a href="admin_promotions.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">العروض والخصومات</a>
+                <a href="admin_subscriptions.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">الاشتراكات</a>
+                <a href="admin_reports.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">التقارير</a>
+                <a href="admin_healthy-meals-admin.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">الوجبات الصحية</a>
+                <a href="admin_business-meals-admin.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">وجبات الأعمال</a>
+                <a href="admin_settings.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">إعدادات المطعم</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-10">
+            <div id="promotions" class="page-content">
+                <h2 class="text-3xl font-bold mb-6 text-secondary">العروض والخصومات</h2>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">إضافة / تعديل عرض</h3>
+                    <form id="promo-form" class="space-y-4">
+                        <input type="hidden" id="promo-id" name="promoId">
+                        <div>
+                            <label for="promo-name" class="block text-sm font-medium text-gray-700">اسم العرض</label>
+                            <input type="text" id="promo-name" name="name" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="promo-description" class="block text-sm font-medium text-gray-700">الوصف</label>
+                            <textarea id="promo-description" name="description" rows="3" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required></textarea>
+                        </div>
+                        <div>
+                            <label for="promo-discount" class="block text-sm font-medium text-gray-700">نسبة الخصم</label>
+                            <input type="number" id="promo-discount" name="discount" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="promo-start-date" class="block text-sm font-medium text-gray-700">تاريخ البدء</label>
+                            <input type="date" id="promo-start-date" name="start_date" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="promo-end-date" class="block text-sm font-medium text-gray-700">تاريخ الانتهاء</label>
+                            <input type="date" id="promo-end-date" name="end_date" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="promo-applicable-items" class="block text-sm font-medium text-gray-700">العناصر القابلة للتطبيق</label>
+                            <input type="text" id="promo-applicable-items" name="applicable_items" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-opacity-90">حفظ التغييرات</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md mt-6">
+                    <h3 class="text-xl font-bold mb-4">العروض الحالية</h3>
+                    <div id="promo-items-list" class="space-y-4">
+                        <!-- Promo items will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="./js/admin_promotions.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وجبات الأعمال - لقمة هنية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#e63946",
+                        secondary: "#1d3557",
+                        accent: "#f1faee"
+                    },
+                    fontFamily: {
+                        'sans': ['Tajawal', 'Arial', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-secondary text-white p-6">
+            <div class="flex items-center space-x-4 mb-8">
+                <img src="./img/0.jpg" alt="شعار لقمة هنية" class="w-12 h-12 rounded-full">
+                <h1 class="text-2xl font-bold">لوحة التحكم</h1>
+            </div>
+            <nav>
+                <a href="admin.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">الرئيسية</a>
+                <a href="admin_orders.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">إدارة الطلبات</a>
+                <a href="admin_menu.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">إدارة القائمة</a>
+                <a href="admin_promotions.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">العروض والخصومات</a>
+                <a href="admin_subscriptions.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">الاشتراكات</a>
+                <a href="admin_reports.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">التقارير</a>
+                <a href="admin_healthy-meals-admin.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">الوجبات الصحية</a>
+                <a href="admin_business-meals-admin.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">وجبات الأعمال</a>
+                <a href="admin_settings.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-primary">إعدادات المطعم</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-10">
+            <div id="business-meals-admin" class="page-content">
+                <h2 class="text-3xl font-bold mb-6 text-secondary">إدارة وجبات الأعمال</h2>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">إضافة / تعديل وجبة أعمال</h3>
+                    <form id="business-form" class="space-y-4">
+                        <input type="hidden" id="business-id" name="businessId">
+                        <div>
+                            <label for="business-name" class="block text-sm font-medium text-gray-700">اسم الوجبة</label>
+                            <input type="text" id="business-name" name="name" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="business-price" class="block text-sm font-medium text-gray-700">السعر</label>
+                            <input type="text" id="business-price" name="price" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="business-description" class="block text-sm font-medium text-gray-700">الوصف</label>
+                            <textarea id="business-description" name="description" rows="3" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required></textarea>
+                        </div>
+                        <div>
+                            <label for="business-image" class="block text-sm font-medium text-gray-700">رابط الصورة</label>
+                            <input type="text" id="business-image" name="image" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="business-people-count" class="block text-sm font-medium text-gray-700">عدد الأشخاص</label>
+                            <input type="number" id="business-people-count" name="people_count" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-opacity-90">حفظ التغييرات</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md mt-6">
+                    <h3 class="text-xl font-bold mb-4">قائمة وجبات الأعمال الحالية</h3>
+                    <div id="business-items-list" class="space-y-4">
+                        <!-- Business meal items will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="./js/admin_business_meals.js"></script>
+</body>
+</html>

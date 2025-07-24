@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العروض - لقمة هنية</title>
+    <meta name="description" content="اكتشف عروض مطعم لقمة هنية الخاصة">
+    <meta name="keywords" content="عروض, لقمة هنية, وجبات, طعام, مطعم, خصومات">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#e63946",
+                        secondary: "#1d3557",
+                        accent: "#f1faee"
+                    },
+                    fontFamily: {
+                        'sans': ['Tajawal', 'Arial', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2 space-x-reverse">
+                <img src="./img/0.jpg" alt="شعار لقمة هنية" class="w-12 h-12 rounded-full">
+                <h1 class="text-2xl font-bold text-primary">لقمة هنية</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-6 space-x-reverse">
+                <a href="index.html" class="text-secondary hover:text-primary transition">الرئيسية</a>
+                <a href="menu.html" class="text-secondary hover:text-primary transition">القائمة</a>
+                <a href="offers.html" class="text-secondary hover:text-primary transition">عروض</a>
+                <a href="subscriptions.html" class="text-secondary hover:text-primary transition">الاشتراكات</a>
+                <a href="healthy-meals.html" class="text-secondary hover:text-primary transition">وجبات صحية</a>
+                <a href="business-meals.html" class="text-secondary hover:text-primary transition">وجبات أعمال</a>
+                <a href="about.html" class="text-secondary hover:text-primary transition">من نحن</a>
+                <a href="contact.html" class="text-secondary hover:text-primary transition">اتصل بنا</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="login.html" class="bg-primary text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition">
+                    تسجيل الدخول
+                </a>
+                <a href="cart.html" class="text-secondary hover:text-primary transition">
+                    <i class="fas fa-shopping-cart text-2xl"></i>
+                </a>
+                <button class="md:hidden text-secondary">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="text-center mb-8">
+            <h2 class="text-4xl font-bold text-secondary mb-4">عروض خاصة</h2>
+            <p class="text-lg text-gray-600">استفد من خصوماتنا وعروضنا الحصرية</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="mb-8">
+            <input type="text" id="search-bar" placeholder="ابحث عن عرض..." class="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+        </div>
+
+        <!-- Offers Container -->
+         <div id="offers-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Offers will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">لقمة هنية</h3>
+                    <p>مطعمنا يقدم ألذ الوجبات بأجود المكونات وأفضل الأسعار.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">روابط سريعة</h4>
+                    <ul class="space-y-2">
+                        <li><a href="menu.html" class="hover:text-primary transition">القائمة</a></li>
+                        <li><a href="offers.html" class="hover:text-primary transition">العروض</a>
+                        <li><a href="subscriptions.html" class="hover:text-primary transition">الاشتراكات</a></li>
+                        <li><a href="healthy-meals.html" class="hover:text-primary transition">وجبات صحية</a></li>
+                        <li><a href="business-meals.html" class="hover:text-primary transition">وجبات أعمال</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition">من نحن</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">اتصل بنا</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center space-x-2 space-x-reverse">
+                            <i class="fas fa-phone"></i>
+                            <span> 088 030 782</span>
+                        </li>
+                        <li class="flex items-center space-x-2 space-x-reverse">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@lokmat-haneya.com</span>
+                        </li>
+                        <li class="flex items-center space-x-2 space-x-reverse">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>صنعاء - الزبيري -خلف سوبر ماركت الهدى</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">تابعنا</h4>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="text-2xl hover:text-primary transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-2xl hover:text-primary transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl hover:text-primary transition"><i class="fab fa-snapchat"></i></a>
+                        <a href="#" class="text-2xl hover:text-primary transition"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center">
+                <p>© 2023 مطعم لقمة هنية. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
