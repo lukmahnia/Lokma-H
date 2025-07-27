@@ -1,18 +1,18 @@
 {
-<<<<<<< HEAD
+
   "name": "gemini-cli",
   "version": "1.0.0",
-=======
+
   "name": "lokma_h",
   "version": "1.0.0",
   "description": "Restaurant Online",
->>>>>>> 5325ff5 (Lukma Hnia)
+
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-<<<<<<< HEAD
+
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/lukmahnia/Lokma-H#readme"
 }
-=======
+
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -45,4 +45,4 @@
     "node": "18.x"
   }
 }
->>>>>>> 5325ff5 (Lukma Hnia)
+
