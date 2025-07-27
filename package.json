@@ -1,40 +1,12 @@
 {
-
-  "name": "gemini-cli",
-  "version": "1.0.0",
-
   "name": "lokma_h",
   "version": "1.0.0",
   "description": "Restaurant Online",
-
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "onlin Restaurant",
-  "dependencies": {
-    "express": "^5.1.0",
-    "sqlite3": "^5.1.7"
-  },
-  "engines": {
-    "node": "22.17.0",
-    "npm": "10.9.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lukmahnia/Lokma-H.git"
-  },
-  "bugs": {
-    "url": "https://github.com/lukmahnia/Lokma-H/issues"
-  },
-  "homepage": "https://github.com/lukmahnia/Lokma-H#readme"
-}
-
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -45,4 +17,3 @@
     "node": "18.x"
   }
 }
-
